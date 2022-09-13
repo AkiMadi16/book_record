@@ -21,25 +21,22 @@ $ node app.js
 - Add in-app screenshots.
 
 ## :pencil2: Planning & Problem Solving
-- Initial stage of planning was easy for me but later I have  decided to reduce the amount of ideas I have implemented with my limited timeframe. 
+- Personalised library
+- Create, read, update and delete user data
+- Creating a reading schedule
+- Save and organise your favourite quotes and notes
+- Track your reading in real-time (set reading goals)
+- Remind you the time to read
+- Record your impression on book
 
-- I have created a simple tic-box schedule with my MS project knowledge and I wanted to keep a track of my progress with tasks that I have planned.
 
-- see below for tic-box plan I've created for tic-tac-toe game.
 
-- [ ] 9 boxes for game deck
-- [ ] Two buttons for players 1 & 2
-- [ ] Three buttons -Start, restart and Quit button
-- [ ] Select Players deck
-- [ ] One box to show player wins(optional -How many times wins) 
-- [ ] CSS styling - key values
-- Flow charts of app logic.
 ![Wireframing]()
 
  # :book_record game: Cool tech
-- Programming languages (HTML /JAVA/ CSS)
+- Programming languages (HTML /Ruby/ CSS)
 - Animations
-- media query to include CSS properties if the screens max width is 800px shows color changes. 
+
 
 ## :scream: Bugs to fix :poop:
 - Anything a little broken
@@ -48,6 +45,7 @@ $ node app.js
 
 ## :sob: Lessons learnt
 What I would do differently if I could wind back the clock...
+
 
 ## :white_check_mark: Future features
 Cool things I would add if I can keep working on this

@@ -1,7 +1,8 @@
 require './models/book'
 
 get '/' do
-  books = all_books()
+  current_user = session['user_id']
+  books = all_books(current_user)
   
   erb :'books/index', locals: {
           books: books
@@ -24,8 +25,9 @@ post '/books' do
     author = params['author']
     illustrator = params['illustrator']
     quote = params['quote']
+    user_id = params['user_id']
   
-    books = create_book(title, img_url, author, illustrator, quote)
+    books = create_book(title, img_url, author, illustrator, quote, user_id)
     
   
     redirect '/' 

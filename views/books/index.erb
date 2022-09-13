@@ -16,34 +16,34 @@
         <a href="/books/new">Add books</a>
     </section>
 
- <ol> 
-    <section class="books">
+  
+    <section>
+    <ol class="books">
     <% books.each do |book| %>
-   
-        <li><section class ="book">
-            <header>
-                <h2><%= book['title']%></h2>
-
-                <section class="controls">
-                    <a href="/books/<%= book['id'] %>/edit">Edit</a>
-                    <form action="/books/<%= book['id'] %>"method="POST">
-                        <input type="hidden" name="_method" value="delete">
-                        <button>Delete</button>
-                    </form>
-                </section>
-            </header>
-        <div>
-            <ul>
-                <img src="<%= book['image_url'] %>" alt="">
-                <li>Author: <%= book['author'] %></li>
-                <li>Illustrator: <%= book['illustrator'] %></li>
-                <li>Quote: <%= book['quote'] %></li>
-            </ul>
-        </div></li>
-        
-
-        </section></ol>
+        <li>
+            <section class ="book">
+                <header>
+                    <h2><%= book['title']%></h2>
+                    <section class="controls">
+                        <a href="/books/<%= book['id'] %>/edit">Edit</a>
+                        <form action="/books/<%= book['id'] %>"method="POST">
+                            <input type="hidden" name="_method" value="delete">
+                            <button>Delete</button>
+                        </form>
+                    </section>
+                </header>
+                <div>
+                    <img src="<%= book['image_url'] %>" alt="">
+                    <ul>
+                        <li>Author: <%= book['author'] %></li>
+                        <li>Illustrator: <%= book['illustrator'] %></li>
+                        <li>Quote: <%= book['quote'] %></li>
+                    </ul>
+                </div>
+            </section>
+        </li>
         <% end %>
+    </ol>
     </section>
     <% else %>
         <a href="/sessions/new">Login</a>
