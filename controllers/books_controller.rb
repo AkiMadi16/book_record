@@ -2,6 +2,7 @@ require './models/book'
 
 get '/' do
   books = all_books()
+  
   erb :'books/index', locals: {
           books: books
         }
@@ -24,7 +25,7 @@ post '/books' do
     illustrator = params['illustrator']
     quote = params['quote']
   
-    books = create_book(title, image_url, author, illustrator, quote)
+    books = create_book(title, img_url, author, illustrator, quote)
     
   
     redirect '/' 

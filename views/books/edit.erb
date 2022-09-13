@@ -1,7 +1,7 @@
 <h1>Book Records App</h1>
-
+<div class=editPage>
 <form action="/books/<%= book['id'] %>" method="POST">
-<input type="hidden" name="_method" value="put">
+    <input type="hidden" name="_method" value="put">
 
     <label for="">Title: </label>
     <input type="text" name="name" value="<%= book['title'] %>">
@@ -22,3 +22,4 @@
 
 
 </form>
+</div>

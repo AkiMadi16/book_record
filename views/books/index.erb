@@ -1,9 +1,10 @@
-<h1>Book Records App</h1>
+<h1><span class=one>M</span><span class=two>Y</span><span class=three>B</span><span class=four>O</span><span class=five>O</span><span class=six>K</span><span class=seven>S</span>
+</h1>
 
-<%= session['user_id'] %>
+<%# <%= session['user_id'] %> 
 
 <% if logged_in? %>
-    <h2>Welcome to Book Record App <%= current_user['first_name'] %></h2>
+    <h2>Welcome to My Books App <%= current_user['first_name'] %></h2>
    
 
     <section class="controls">
@@ -15,10 +16,11 @@
         <a href="/books/new">Add books</a>
     </section>
 
-
+ <ol> 
     <section class="books">
     <% books.each do |book| %>
-        <section class ="book">
+   
+        <li><section class ="book">
             <header>
                 <h2><%= book['title']%></h2>
 
@@ -30,16 +32,17 @@
                     </form>
                 </section>
             </header>
-        <img src="<%= book['image_url'] %>" alt="">
         <div>
             <ul>
+                <img src="<%= book['image_url'] %>" alt="">
                 <li>Author: <%= book['author'] %></li>
                 <li>Illustrator: <%= book['illustrator'] %></li>
                 <li>Quote: <%= book['quote'] %></li>
             </ul>
-        </div>
+        </div></li>
+        
 
-        </section>
+        </section></ol>
         <% end %>
     </section>
     <% else %>

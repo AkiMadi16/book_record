@@ -3,15 +3,16 @@
 }
 
 body {
-    font-family: sans-serif;
-    background-color: rgb(12, 24, 28);
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    background-color: white;
     margin: 20px 20px;
-    background-image: url(https://c4.wallpaperflare.com/wallpaper/154/97/280/nebula-4k-ultra-hd-wallpaper-preview.jpg);
+    /* background-image: url(https://media.istockphoto.com/photos/bookshelves-in-the-library-with-colorful-books-3d-render-picture-id1209858959?s=2048x2048); */
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.planets {
+.books {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.25rem;
@@ -19,56 +20,61 @@ body {
 }
 
 a, button {
-    border: 1px solid rgb(60, 0, 255);
-    padding: 0.25rem 0.5rem;
-    background-color: rgb(174, 174, 234);
-    color: rgb(13, 12, 16);
-    font-size: 0.8rem;
+    border: none;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 1rem 1rem;
+    background-color: rgb(207, 230, 78);
+    color: rgb(19, 16, 29);
+    font-size: 1rem;
     text-decoration: none;
     cursor: pointer;
 }
 
-.planet header {
+.book header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    background-color: rgb(14, 14, 68);
+    background-color: rgb(92, 92, 148);
 }
 
-.planet img {
-    width: 100%;
-    height: 300px;
+.book img {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
 }
 
-.planet .controls {
+.book .controls {
     display: flex;
     gap: 0.5rem;
 }
 
 h1 {
-    color: rgb(141, 183, 235);
-    font-size: 50px;
+    color: rgb(11, 15, 20);
+    font-size: 100px;
+    text-align: center;
 }
 
 h2 {
-    color: rgb(159, 197, 235);
+    color: rgb(14, 24, 34);
+    font-size: 20px;
 }
-.planet h2 {
+.book h2 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: rgb(122, 185, 232);
-    font-size: 30px;
+    color: rgb(12, 19, 24);
+    font-size: 20px;
 }
 
-.planets li {
-    color: white; 
+.books li {
+    color: rgb(12, 8, 27); 
 }
 
 label { 
-    color: white; 
+    color: rgb(17, 17, 30); 
     font-weight: bold; 
     display: block;
     width: 150px; 
@@ -79,4 +85,53 @@ label {
 
 label:after {
     content: "- "
+}
+
+.books {
+    background-color: rgb(173, 203, 240);
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: rgb(92, 92, 148);
+}
+
+h1 .one{
+    color: rgb(12, 12, 55);
+}
+h1 .two{
+    color: rgb(231, 157, 236);
+}
+h1 .three {
+    color: rgb(23, 20, 76);
+    padding-left: 20px;
+}
+h1 .four {
+    color: rgb(240, 108, 87);
+}
+h1 .five {
+    color: rgb(120, 239, 223);
+}
+h1 .six {
+    color: rgb(232, 225, 107);
+}
+h1 .seven {
+    color: rgb(238, 151, 174);
+}
+
+.editPage {
+    background-color: rgb(96, 158, 224);
+    padding: 50px 50px;
+}
+
+.newBooks {
+    background-color: rgb(96, 158, 224);
+    padding: 50px 50px;
+}
+input {
+    border-style: groove;
+    background-color: rgb(173, 171, 171);
 }

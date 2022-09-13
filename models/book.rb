@@ -2,7 +2,7 @@ def all_books()
     run_sql("SELECT * FROM books")
 end
 
-def create_book(title, image_url, author, illustrator, quote)
+def create_book(title, img_url, author, illustrator, quote)
 
     run_sql("INSERT INTO books(title, image_url, author, illustrator, quote) VALUES($1, $2, $3, $4, $5)", [title, img_url, author, illustrator, quote])
 end
