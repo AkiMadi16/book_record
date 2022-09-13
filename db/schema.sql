@@ -1,25 +1,20 @@
-CREATE DATABASE planets_app;
-\c planets_app
+CREATE DATABASE book_records_db;
+\c book_records_db
 
-CREATE TABLE planets (
+CREATE TABLE books (
     id SERIAL PRIMARY KEY,
-    name TEXT,
+    title TEXT,
     image_url TEXT, 
-    diameter REAL,
-    distance REAL,
-    mass REAL,
-    moon_count INTEGER
+    author TEXT,
+    illustrator TEXT,
+    quote TEXT
 );
 
-INSERT INTO planets(name, image_url, diameter, distance, mass, moon_count)
-VALUES('Earth', 'https://i.imgur.com/3xcqniX.jpg', 1.2e6, 1, 5.9e26 , 1);
-
-INSERT INTO planets(name, image_url, diameter, distance, mass, moon_count)
-VALUES('Neptune', 'https://i.imgur.com/HwnYELk.jpg', 4.9e6, 30.1, 1.02e26, 14);
+INSERT INTO books(title, image_url, author, illustrator, quote)
+VALUES('Tidler', 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1408928238i/7281298.jpgX.jpg', 'Julia Donaldson', 'Alex Scheffler', 'Tidler is late');
 
 
-
--- SELECT * FROM planets;
+-- SELECT * FROM books;
 
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,

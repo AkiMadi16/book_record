@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(12, 24, 28);
+    margin: 20px 20px;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/154/97/280/nebula-4k-ultra-hd-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.planets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+a, button {
+    border: 1px solid rgb(60, 0, 255);
+    padding: 0.25rem 0.5rem;
+    background-color: rgb(174, 174, 234);
+    color: rgb(13, 12, 16);
+    font-size: 0.8rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.planet header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: rgb(14, 14, 68);
+}
+
+.planet img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.planet .controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+h1 {
+    color: rgb(141, 183, 235);
+    font-size: 50px;
+}
+
+h2 {
+    color: rgb(159, 197, 235);
+}
+.planet h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgb(122, 185, 232);
+    font-size: 30px;
+}
+
+.planets li {
+    color: white; 
+}
+
+label { 
+    color: white; 
+    font-weight: bold; 
+    display: block;
+    width: 150px; 
+    padding: 10px;
+    /* align-items: center; */
+     /* float: left;  */
+} 
+
+label:after {
+    content: "- "
+}

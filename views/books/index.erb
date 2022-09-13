@@ -1,0 +1,48 @@
+<h1>Book Records App</h1>
+
+<%= session['user_id'] %>
+
+<% if logged_in? %>
+    <h2>Welcome to Book Record App <%= current_user['first_name'] %></h2>
+   
+
+    <section class="controls">
+        <form action="/sessions" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button>Logout</button>
+        </form>
+        <br>
+        <a href="/books/new">Add books</a>
+    </section>
+
+
+    <section class="books">
+    <% books.each do |book| %>
+        <section class ="book">
+            <header>
+                <h2><%= book['title']%></h2>
+
+                <section class="controls">
+                    <a href="/books/<%= book['id'] %>/edit">Edit</a>
+                    <form action="/books/<%= book['id'] %>"method="POST">
+                        <input type="hidden" name="_method" value="delete">
+                        <button>Delete</button>
+                    </form>
+                </section>
+            </header>
+        <img src="<%= book['image_url'] %>" alt="">
+        <div>
+            <ul>
+                <li>Author: <%= book['author'] %></li>
+                <li>Illustrator: <%= book['illustrator'] %></li>
+                <li>Quote: <%= book['quote'] %></li>
+            </ul>
+        </div>
+
+        </section>
+        <% end %>
+    </section>
+    <% else %>
+        <a href="/sessions/new">Login</a>
+        <a href="/users/new">Sign up</a>
+  <% end %>

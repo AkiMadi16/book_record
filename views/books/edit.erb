@@ -1,0 +1,24 @@
+<h1>Book Records App</h1>
+
+<form action="/books/<%= book['id'] %>" method="POST">
+<input type="hidden" name="_method" value="put">
+
+    <label for="">Title: </label>
+    <input type="text" name="name" value="<%= book['title'] %>">
+
+    <label for="">Image URL:</label>
+    <input type="text" name="image_url" value="<%= book['image_url'] %>">
+
+    <label for="">Author:</label>
+    <input type="text" name="author" value="<%= book['author'] %>">
+
+    <label for="">Illustrator:</label>
+    <input type="text" name="illustrator" value="<%= book['illustrator'] %>">
+
+    <label for="">Quote:</label>
+    <input type="text" name="quote" value="<%= book['quote'] %>">
+
+    <button>Update books</button>
+
+
+</form>

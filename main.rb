@@ -1,14 +1,22 @@
      
 require 'sinatra'
-require 'httparty'
+# require 'httparty'
 require 'dotenv/load'
+require './db/db'
 
-get '/' do
+enable :sessions
 
-  HTTParty.get("https://omdbapi.com?apikey=#{ENV['OMDB_API_KEY']}&t=jaws").to_s
+require './controllers/books_controller'
+require './controllers/users_controller'
+require './controllers/sessions_controller'
 
-  erb :index
-end
+require './helpers/sessions_helper'
+
+
+
+
+
+
 
 
 
