@@ -15,10 +15,10 @@ VALUES('Tidler', 'https://images-na.ssl-images-amazon.com/images/S/compressed.ph
 
 UPDATE books SET image_url = 'https://www.booktopia.com.au/covers/big/9781407170756/3658/tiddler.jpg' WHERE title = 'Tidler';
 
--- ALTER TABLE books ADD COLUMN user_id TEXT;
+ALTER TABLE books ADD COLUMN user_id INTEGER;
 -- ALTER TABLE books ALTER COLUMN user_id INTEGER;
 
--- SELECT * FROM books;
+SELECT * FROM books;
 
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
