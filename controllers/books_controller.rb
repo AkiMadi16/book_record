@@ -5,7 +5,7 @@ get '/' do
   # p current_user
   books = all_books(current_user)
 
-  p "===================#{books.values}"
+  # p "#{books.values}"
   
   erb :'books/index', locals: {
     books: books
