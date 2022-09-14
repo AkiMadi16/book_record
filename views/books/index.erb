@@ -48,6 +48,9 @@
                             <input type="hidden" name="_method" value="delete">
                             <button>Delete</button>
                         </form>
+                        <form action="/books/<%= book['id'] %>/likes" method="POST">
+                        <button><%= get_likes(book['id']).to_a.length() %> ❤️</button>
+                        </form>
                     </section>
                 </header>
                 <div>

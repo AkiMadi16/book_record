@@ -38,3 +38,17 @@ CREATE TABLE comments(
 );
 
 SELECT * FROM comments;
+
+
+CREATE TABLE likes(
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER,
+    book_id INTEGER
+);
+
+ALTER TABLE likes
+ADD CONSTRAINT unique_likes
+UNIQUE (user_id, book_id);
+
+SELECT * FROM likes;
+
