@@ -32,7 +32,7 @@ delete '/sessions' do
   # end
 
   post '/books/:id/likes' do
-    book_id = params['id']
+    book_id = params['book_id']
     user_id = session['user_id']
 
     create_like(book_id, user_id)
