@@ -7,16 +7,13 @@ CREATE TABLE books (
     image_url TEXT, 
     author TEXT,
     illustrator TEXT,
-    quote TEXT
+    quote TEXT,
+    user_id INTEGER
 );
 
 INSERT INTO books(title, image_url, author, illustrator, quote)
-VALUES('Tidler', 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1408928238i/7281298.jpgX.jpg', 'Julia Donaldson', 'Alex Scheffler', 'Tidler is late');
+VALUES('Tidler', 'https://www.booktopia.com.au/covers/big/9781407170756/3658/tiddler.jpg', 'Julia Donaldson', 'Alex Scheffler', 'Tidler is late');
 
-UPDATE books SET image_url = 'https://www.booktopia.com.au/covers/big/9781407170756/3658/tiddler.jpg' WHERE title = 'Tidler';
-
-ALTER TABLE books ADD COLUMN user_id INTEGER;
--- ALTER TABLE books ALTER COLUMN user_id INTEGER;
 
 SELECT * FROM books;
 
@@ -24,10 +21,20 @@ CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     first_name TEXT,
     last_name TEXT,
-    email TEXT
+    email TEXT,
+    password_digest TEXT,
+    photo_url TEXT,
+    bio TEXT
 );
 
 SELECT * FROM users;
--- DELETE FROM users;
 
-ALTER TABLE users ADD COLUMN password_digest TEXT;
+
+CREATE TABLE comments(
+    id SERIAL PRIMARY KEY,
+    comment TEXT,
+    book_id INTEGER,
+    user_id INTEGER
+);
+
+SELECT * FROM comments;

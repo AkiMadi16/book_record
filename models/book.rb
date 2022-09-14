@@ -21,3 +21,7 @@ def delete_book(id)
     run_sql("DELETE FROM books WHERE id =$1", [id])
 end
 
+# def create_profile(photo_url, bio)
+#     run_sql("INSERT INTO users(pho) VALUES($1, $2, $3, $4, $5, $6)", [title, img_url, author, illustrator, quote, user_id])
+# end
+

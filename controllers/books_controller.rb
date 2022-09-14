@@ -2,12 +2,14 @@ require './models/book'
 
 get '/' do
   current_user = session['user_id']
+  # p current_user
   books = all_books(current_user)
+
+  p "===================#{books.values}"
   
   erb :'books/index', locals: {
-          books: books
-        }
-
+    books: books
+  }
 end
 
 
@@ -63,7 +65,13 @@ post '/books' do
     delete_book(id)
     redirect '/'
   end
+
+
+  get '/books/display' do
+    erb :'books/display'
+  end
   
+
   
   
   

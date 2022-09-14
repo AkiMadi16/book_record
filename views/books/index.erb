@@ -1,22 +1,40 @@
-<h1><span class=one>M</span><span class=two>Y</span><span class=three>B</span><span class=four>O</span><span class=five>O</span><span class=six>K</span><span class=seven>S</span>
-</h1>
-
+<div class="header">
+    <h1>
+        <span class=one>M</span><span class=two>Y</span><span class=three>B</span><span class=four>O</span><span class=five>O</span><span class=six>K</span><span class=seven>S</span>
+    </h1>
+    <section class="controls">
+        <% if logged_in? %>
+            <form action="/sessions" method="POST">
+                <input type="hidden" name="_method" value="delete">
+                <button>Logout</button>
+            </form>
+        <% else %>
+            <a href="/sessions/new">Login</a>
+            <a href="/users/new">Sign up</a>
+        <% end %>
+    </section>
+    
+</div>
 <%# <%= session['user_id'] %> 
 
 <% if logged_in? %>
-    <h2>Welcome to My Books App <%= current_user['first_name'] %></h2>
-   
-
-    <section class="controls">
-        <form action="/sessions" method="POST">
-            <input type="hidden" name="_method" value="delete">
-            <button>Logout</button>
-        </form>
-        <br>
-        <a href="/books/new">Add books</a>
-    </section>
-
-  
+    <div class="profile_controls"> 
+        <section class="profile"> 
+            <img src="<%= current_user['photo_url'] %>" alt="" />
+            <a href="/books/display">Edit</a>
+            
+            <p><%= current_user['bio'] %></p>
+            <a href="/books/new">Add books</a>
+        </section> 
+    </div>
+    <h2>
+        <strong>Welcome to My Books App <%= current_user['first_name'] %>. 😍🥳 </strong>
+        <% if books.any? %>        
+            <%= "You have read #{books.to_a.length()} books!" %> 
+        <% else %>
+            <%= "You haven't read any books yet.!" %>
+        <% end %>
+    </h2>
     <section>
     <ol class="books">
     <% books.each do |book| %>
@@ -38,14 +56,18 @@
                         <li>Author: <%= book['author'] %></li>
                         <li>Illustrator: <%= book['illustrator'] %></li>
                         <li>Quote: <%= book['quote'] %></li>
+                        
                     </ul>
                 </div>
+                <%# <Section class="comments">
+                <% comments.each do |comment| %>
+                        <%# <br>
+                        <input type="text" name="comments"> %>
+
+                </Section>
             </section>
         </li>
         <% end %>
     </ol>
     </section>
-    <% else %>
-        <a href="/sessions/new">Login</a>
-        <a href="/users/new">Sign up</a>
-  <% end %>
+    <% end %>
