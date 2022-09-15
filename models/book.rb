@@ -18,15 +18,15 @@ def update_book(id, title, img_url, author, illustrator, quote)
 end
 
 def delete_book(id)
-    run_sql("DELETE FROM books WHERE id =$1", [id])
+    run_sql("DELETE FROM books WHERE id = $1", [id])
 end
 
 def get_likes(book_id)
-    run_sql("SELECT * FROM likes WHERE book_id =$1", [book_id])
+    run_sql("SELECT * FROM likes WHERE book_id = $1", [book_id])
 end
 
 def get_comments(book_id)
-    run_sql("SELECT * FROM comments WHERE book_id =$1", [book_id])
+    run_sql("SELECT * FROM comments WHERE book_id = $1", [book_id])
 end
 
 
