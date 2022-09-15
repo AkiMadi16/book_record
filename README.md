@@ -1,7 +1,7 @@
 # book_record
 This app uses sinatra and is used to help users to organize their reading habits.When you open the app, you will be able to log in or create an account to start your journey. Once you create an account, you will be able to create entries and edit, delete, or look at them in your own profile. 
 
-## :computer: [Click here](https://akimadi16.github.io/book_record/) to see my live project!
+## :computer: [Click here](https://blooming-coast-56411.herokuapp.com/) to see my live project!
 
 # Usage
 Users can create an account to keep track of their reads and to create read update delete their own entries. personalised library.

@@ -23,9 +23,9 @@ def create_profile(photo_url, bio, user_id)
   run_sql("UPDATE users SET photo_url = $2, bio = $3  WHERE id = $1", [user_id, photo_url, bio]) 
 end
 
-# def create_comment(comment, book_id, user_id)
-#   run_sql("INSERT INTO likes(comment, book_id, user_id) VALUES($1, $2, $3)", [comment, book_id, user_id])
-# end
+def create_comment(comment, book_id, user_id)
+  run_sql("INSERT INTO comments(comment, book_id, user_id) VALUES($1, $2, $3)", [comment, book_id, user_id])
+end
 
 def create_like(book_id, user_id)
   run_sql("INSERT INTO likes(book_id, user_id) VALUES($1, $2)", [book_id, user_id])

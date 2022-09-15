@@ -39,7 +39,7 @@
     <ol class="books">
     <% books.each do |book| %>
         <li>
-            <section class ="book">
+            <section class="book">
                 <header>
                     <h2><%= book['title']%></h2>
                     <section class="controls">
@@ -49,7 +49,7 @@
                             <button>Delete</button>
                         </form>
                         <form action="/books/<%= book['id'] %>/likes" method="POST">
-                        <button><%= get_likes(book['id']).to_a.length() %> ❤️</button>
+                            <button><%= get_likes(book['id']).to_a.length() %> ❤️</button>
                         </form>
                     </section>
                 </header>
@@ -60,7 +60,10 @@
                         <li>Illustrator: <%= book['illustrator'] %></li>
                         <li>Quote: <%= book['quote'] %></li>
                         <br>
+                        <form action="/books/<%= book['id'] %>/comments" method="POST">
                         <input type="text" name="comments">
+                        <p><%= current_user['comments'] %></p>
+                        </form>
                     </ul>
                 </div>
             </section>

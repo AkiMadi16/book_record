@@ -21,21 +21,23 @@ delete '/sessions' do
     redirect '/'
   end
 
-  # post '/books/:id/comments' do
-  #   comment = params['comment']
-  #   book_id = params['book_id']
-  #   user_id = session['user_id']
+  post '/books/:id/comments' do
+    comment = params['comment']
+    book_id = params['id']
+    user_id = session['user_id']
 
-  #   create_comment(comment, book_id, user_id)
+    create_comment(comment, book_id, user_id)
 
-  #   redirect '/'
-  # end
+    redirect '/'
+  end
 
   post '/books/:id/likes' do
-    book_id = params['book_id']
+    book_id = params['id']
     user_id = session['user_id']
 
     create_like(book_id, user_id)
 
     redirect '/'
   end
+
+  
