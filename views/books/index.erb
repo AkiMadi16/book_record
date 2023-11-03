@@ -1,4 +1,5 @@
 <div class="header">
+    <img id="logo" src="https://i.imgur.com/oF3wOaF.png" alt="logo">
     <h1>
         <span class=one>M</span><span class=two>Y</span><span class=three>B</span><span class=four>O</span><span class=five>O</span><span class=six>K</span><span class=seven>S</span>
     </h1>
@@ -8,12 +9,12 @@
                 <input type="hidden" name="_method" value="delete">
                 <button>Logout</button>
             </form>
+               <a href="/dashboard/display">Dashboard</a>
         <% else %>
             <a href="/sessions/new">Login</a>
-            <a href="/users/new">Sign up</a>
+              <a href="/users/new">Sign up</a>      
         <% end %>
-    </section>
-    
+    </section>   
 </div>
 <%# <%= session['user_id'] %> 
 
@@ -21,21 +22,21 @@
     <div class="profile_controls"> 
         <section class="profile"> 
             <img src="<%= current_user['photo_url'] %>" alt="" />
-            <a href="/books/display">Edit</a>
+            <a href="/books/profile">Edit</a>
             
             <p><%= current_user['bio'] %></p>
             <a href="/books/new">Add books</a>
         </section> 
     </div>
     <h2>
-        <strong>Welcome to My Books App <%= current_user['first_name'] %>. 😍🥳 </strong>
-        <% if books.any? %>        
-            <%= "You have read #{books.to_a.length()} books!" %> 
+        <strong>Welcome to My Books App <%= current_user['first_name'] %>. ✨ </strong>
+        <% if books.any?  %>        
+            <%= "You have read #{books.to_a.length()} #{books.to_a.length() == 1 ? 'book' : 'books' }!" %>  
         <% else %>
             <%= "You haven't read any books yet.!" %>
         <% end %>
     </h2>
-    <section>
+    <section class='cards'>
     <ol class="books">
     <% books.each do |book| %>
         <li>
@@ -53,17 +54,25 @@
                         </form>
                     </section>
                 </header>
-                <div>
+                <div class='card'>
                     <img src="<%= book['image_url'] %>" alt="">
                     <ul>
-                        <li>Author: <%= book['author'] %></li>
-                        <li>Illustrator: <%= book['illustrator'] %></li>
-                        <li>Quote: <%= book['quote'] %></li>
+                        <li>✍️ <%= book['author'] %></li>
+                        <li>🎨 <%= book['illustrator'] %></li>
+                        <li>💬 <%= book['quote'] %></li>
                         <br>
-                        <form action="/books/<%= book['id'] %>/comments" method="POST">
-                        <input type="text" name="comments">
-                        <p><%= current_user['comments'] %></p>
+                        <div class='comments'>
+                        <form class="comments" action="/books/<%= book['id'] %>/comments" method="POST">
+                        <input type="text" name="comments" value=<%= %> placeholder="write a comment">
+                        <p><%= current_user['comment'] %></p>
+                        <p><%=current_user['first_name']%></p>
+                        <button class="comments"><%=get_comments(book['id']) %>post</button>
                         </form>
+                         <form class="comments" action="/books/<%= book['id'] %>/comments" method="PUT">
+                        <button class="comments"><%=get_comments(book['id']) %>edit</button>
+                        </form>
+
+                        </div>
                     </ul>
                 </div>
             </section>

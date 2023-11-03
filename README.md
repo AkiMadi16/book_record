@@ -13,11 +13,7 @@ Users can create an account to keep track of their reads and to create read upda
 - 
 
 - Download instructions (if relevant):
-```zsh
-$ git clone my-awesome-app
-$ cd my-awesome-app
-$ node app.js
-```
+
 - Add in-app screenshots.
 
 ## :pencil2: Planning & Problem Solving
@@ -29,21 +25,26 @@ $ node app.js
 - Remind user the time to read
 - Record user impression on book
 
-![Wireframing] url(https://i.imgur.com/a17Flr4.png)
+![image](https://i.imgur.com/a17Flr4.png)
 
- #🔺 :book_record game: Cool tech
+ #🔺 :book_record app: Cool tech
 - Programming languages (HTML /Ruby/CSS/SQL)
 
 
 
 ## :scream: Bugs to fix :poop:
-- Redirect to / if logged out user go to books/:id/edit
-
+- Redirect to / if logged out user go to anothe page
+- Once logged in like button should worked for the user only but could see other users count as well.
+- like button click once only and click again will redirect or lose the first action. 
 
 ## :sob: Lessons learnt
 - How to debug and fix errors
+- new route to see if user not signed others cant edit hide edit delete buttons
+- Use Bootstap Caurosel Plugin to slide the cards
+- Add CSS gradient to cards will display smooth transition between two or more specified colors which not covers my card heading which contains buttons. 
+
 
 
 
 ## :white_check_mark: Future features
-I would add some more functions for user to search books add books option and camera picture of book cover upload option and creating a page to user to read a book option or audio book option.
+I would add some more functions for user to search books and add books option and camera picture of book cover upload option and creating a page to user to read a book option or audio book option. Mainly focusing as an educational site.

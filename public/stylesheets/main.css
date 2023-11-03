@@ -1,167 +1,206 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 30px;
-    background-color: white;
-    margin: 20px 20px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.books {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1.5rem;
-    padding: 1.25rem;
-}
-
-a, button {
-    border: none;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 20px;
-    border-radius: 20px;
-    padding: 1rem 1rem;
-    background-color: rgb(207, 230, 78);
-    color: rgb(19, 16, 29);
-    font-size: 1rem;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.book {
-    border-radius: 20px;
-    background-image: url(https://img.freepik.com/free-photo/white-sand-beach-drone-shot_53876-153330.jpg?w=360&t=st=1663160437~exp=1663161037~hmac=88d2cab53c86fa7a2e47abf29a9289da6e7c80b038ab528b6cdd05d5ef2415c9);
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-}
-
-.book header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: white;
-}
-
-.book img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.book .controls {
-    display: flex;
-    gap: 0.5rem;
-}
-
-h1 {
-    color: rgb(11, 15, 20);
-    font-size: 100px;
-    text-align: center;
-    margin: 0;
-}
-
-h2 {
-    color: rgb(14, 24, 34);
-    font-size: 20px;
-}
-.book h2 {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: rgb(12, 19, 24);
-    font-size: 20px;
-}
-
-.book ul {
-    padding: 10px 40px; 
-}
-
-.books li {
-    color: rgb(12, 8, 27); 
-    list-style-position: inside;
-    font-size: 20px;
-    text-overflow: ellipsis;
-}
-
-label { 
-    color: rgb(17, 17, 30); 
-    font-weight: bold; 
-    display: block;
-    width: 150px; 
-    padding: 10px;
-    /* align-items: center; */
-     /* float: left;  */
-} 
-
-label:after {
-    content: "- "
-}
-
-.books {
-    background-color: rgb(173, 203, 240);
-}
-
-h1 .one{
-    color: rgb(12, 12, 55);
-}
-h1 .two{
-    color: rgb(231, 157, 236);
-}
-h1 .three {
-    color: rgb(23, 20, 76);
-    padding-left: 20px;
-}
-h1 .four {
-    color: rgb(240, 108, 87);
-}
-h1 .five {
-    color: rgb(120, 239, 223);
-}
-h1 .six {
-    color: rgb(232, 225, 107);
-}
-h1 .seven {
-    color: rgb(238, 151, 174);
-}
-
-
-input {
-    border-style: groove;
-    background-color: rgb(173, 171, 171);
-}
-
-.profile_controls {
-    display: flex;
-    justify-content: center;
-}
-
-.forms {
-    background-image: url(https://i.imgur.com/3wzRUje.png);
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profile img {
-    height: 100px;
-    width: 100px;
-    border-radius: 100px;
-    object-fit: cover;
-}
-
-.profile p {
-    margin: 0;
+  font-family: "Patrick Hand", cursive;
+  font-size: 30px;
+  margin: 20px 20px;
+  background-repeat: no-repeat;
+  background-image: url(https://i.imgur.com/GrYRw9U.png);
+  background-size: cover;
 }
 
 .header {
+  background-color: rgb(204, 240, 247);
+  background-position: bottom;
+  background-blend-mode: soft-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background-image: url(https://img.freepik.com/free-photo/white-sand-beach-drone-shot_53876-153330.jpg?w=360&t=st=1663160437~exp=1663161037~hmac=88d2cab53c86fa7a2e47abf29a9289da6e7c80b038ab528b6cdd05d5ef2415c9);
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 20px;
+}
+
+a,
+button {
+  border: none;
+  font-family: "Patrick Hand", cursive;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 1rem 1rem;
+  background-color: rgb(207, 230, 78);
+  color: rgb(19, 16, 29);
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.book {
+  border-radius: 20px;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.book header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+}
+
+.book img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.book .controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+h1 {
+  color: rgb(11, 15, 20);
+  font-size: 100px;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  color: rgb(14, 24, 34);
+  font-size: 20px;
+}
+.book h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgb(12, 19, 24);
+  font-size: 20px;
+}
+
+.book ul {
+  padding: 0;
+  list-style: none;
+}
+
+.book .comments {
+  padding: 15px;
+}
+
+.book li {
+  color: rgb(12, 8, 27);
+  font-size: 20px;
+  padding: 15px;
+  border-top: 1px solid lightgray;
+  text-overflow: ellipsis;
+}
+
+label {
+  color: rgb(17, 17, 30);
+  font-weight: bold;
+  display: block;
+  width: 150px;
+  padding: 10px;
+  /* align-items: center; */
+  /* float: left;  */
+}
+
+label:after {
+  content: "- ";
+}
+
+h1 .one {
+  color: rgb(12, 12, 55);
+}
+h1 .two {
+  color: rgb(231, 157, 236);
+}
+h1 .three {
+  color: rgb(23, 20, 76);
+  padding-left: 20px;
+}
+h1 .four {
+  color: rgb(240, 108, 87);
+}
+h1 .five {
+  color: rgb(120, 239, 223);
+}
+h1 .six {
+  color: rgb(232, 225, 107);
+}
+h1 .seven {
+  color: rgb(238, 151, 174);
+}
+
+input {
+  border-style: groove;
+  background-color: rgb(173, 171, 171);
+}
+
+.profile_controls {
+  display: flex;
+  justify-content: center;
+}
+
+.forms {
+  background-image: url(https://i.imgur.com/3wzRUje.png);
+  background-position: 0px;
+  height: 600px;
+  width: 600px;
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.profile p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .forms {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* mobile styles */
+@media (max-width: 525px) {
+  .header {
+    flex-direction: column;
+  }
+  body {
+    min-height: 100vh;
+  }
+
+  .forms {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }

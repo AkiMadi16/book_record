@@ -11,7 +11,6 @@ get '/users/new' do
     email = params['email']
     password = params['password']
     
-    
     create_user(first_name, last_name, email, password)
   
     redirect '/'

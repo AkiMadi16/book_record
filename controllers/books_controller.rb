@@ -12,6 +12,13 @@ get '/' do
   }
 end
 
+get '/dashboard' do
+  erb :'dashboard/display'
+end
+
+get '/dashboard/display' do
+  erb :'dashboard/display'
+end
 
 # HTTParty.get("https://omdbapi.com?apikey=#{ENV['OMDB_API_KEY']}&t=jaws").to_s
   
@@ -31,7 +38,6 @@ post '/books' do
   
     books = create_book(title, img_url, author, illustrator, quote, user_id)
     
-  
     redirect '/' 
   end
   
@@ -67,8 +73,8 @@ post '/books' do
   end
 
 
-  get '/books/display' do
-    erb :'books/display'
+  get '/books/profile' do
+    erb :'books/profile'
   end
   
 
